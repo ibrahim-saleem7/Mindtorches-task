@@ -1,0 +1,82 @@
+<div class="container d-flex  justify-content-center align-items-center min-vh-100 ">
+
+    <section class="shadow-lg p-3 mb-5 bg-body rounded position-relative ">
+
+        <div style="height: 280px;width: 290px;position: absolute;border-radius: 100%;border: 20px solid #851111;right: -120px;top: -120px;"></div>
+
+        <form  [formGroup]="employeeForm" (ngSubmit)="onSubmit()" class="row g-3 pt-4 px-2" >
+            
+            
+            <div *ngIf="isSuccess" class="col-12 success-add"><p>Employee Added Successfully</p></div>
+
+            <div class="col-12 col-md-6">
+                <label for="company" class="form-label fw-semibold ">Company Name :</label>
+                <input formControlName="companyName" type="text" class="form-control" id="company" placeholder="Company Name" required>
+                <ng-container *ngIf="employeeForm.get('companyName')?.errors && employeeForm.get('companyName')?.touched">
+                    <small *ngIf="employeeForm.get('companyName')?.getError('required')"  class="text-danger">
+                        Company Name is Required.
+                    </small>
+                </ng-container>
+            </div>
+
+              <div class="col-12 col-md-6 position-relative">
+                <label for="employee" class="form-label fw-semibold ">Employee Name :</label>
+                <input formControlName="employeeName"  type="text" class="form-control" id="employee" placeholder="Employee Name "required>
+                <ng-container *ngIf="employeeForm.get('employeeName')?.errors && employeeForm.get('employeeName')?.touched">
+                    <small *ngIf="employeeForm.get('employeeName')?.getError('required')"  class="text-danger">
+                        Employee Name is Required.
+                    </small>
+                </ng-container>
+            </div>
+
+              <div class="col-12 col-md-6">
+                <label for="idNo" class="form-label fw-semibold ">ID NO :</label>
+                <input formControlName="idNo" type="text" class="form-control" id="idNo" placeholder="ID NO" pattern="[0-9]*" required>
+                <ng-container *ngIf="employeeForm.get('idNo')?.errors && employeeForm.get('idNo')?.touched">
+                    <small *ngIf="employeeForm.get('idNo')?.getError('required')"   class="text-danger">
+                        ID NO is Required.
+                    </small>
+                    <small *ngIf="employeeForm.get('idNo')?.getError('pattern')"   class="text-danger">
+                        Only numbers allowed
+                    </small>
+                </ng-container>
+            </div>
+
+              <div class="col-12 col-md-6 position-relative">
+                <label for="DOB" class="form-label fw-semibold">DOB :</label>
+                <input formControlName="DOB" type="date" class="form-control" id="DOB" placeholder="DOB"required>
+                <ng-container *ngIf="employeeForm.get('DOB')?.errors && employeeForm.get('DOB')?.touched">
+                    <small *ngIf="employeeForm.get('DOB')?.getError('required')"   class="text-danger">
+                        Data Of Birth is Required
+                    </small>
+                </ng-container>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <label for="email" class="form-label fw-semibold">Email :</label>
+                <input formControlName="email" type="email" class="form-control" id="email" placeholder="Email" required>
+                <ng-container *ngIf="employeeForm.get('email')?.errors && employeeForm.get('email')?.touched">
+                    <small *ngIf="employeeForm.get('email')?.getError('required')" class="text-danger">
+                        Email is Required.
+                    </small>
+                    <small *ngIf="employeeForm.get('email')?.getError('email')" class="text-danger">
+                        Invalid Email Format.
+                    </small>
+                </ng-container>
+            </div>
+
+            <div class="col-12 text-end ">
+
+                <i (click)="employeeForm.reset()"  class="fa-solid fa-arrow-rotate-left" style="color: #a8a8a8;"></i>
+                <button [disabled]="employeeForm.invalid" type="submit" class="btn btn-dark ms-5 ">Save</button>
+            </div>
+
+        </form>
+
+    </section>
+
+    
+
+</div>
+
+

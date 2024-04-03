@@ -1,0 +1,19 @@
+section{
+    width: 800px;
+}
+
+i{
+    cursor: pointer;
+    transition: 0.4s all ease-in; 
+}
+
+i:hover{
+    color: #5c5555 !important;
+}
+
+.success-add{
+    font-size: 20px;
+    font-weight: 600;
+    color: #60bf60;
+    text-align: center;
+}

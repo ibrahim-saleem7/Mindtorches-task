@@ -1,0 +1,150 @@
+<div class="container-id">
+
+    <!--go to form-->
+    <div class="back-btn">
+        <i routerLink="/" class="fa-solid fa-angles-left fa-2xl" style="color: #b2b2b3;"></i>
+    </div>
+
+<!--items ::being-->
+    <div class="item item-one"></div>
+
+    <div class="item item-two"></div>
+
+    <div class="item item-three"></div>
+
+    <div class="item item-four">
+        <div class=" item-sub-four"></div>
+        <div class=" item-main-four"></div>
+    </div>
+
+    <div class="item item-five"></div>
+<!--items ::end-->
+
+
+    <!--card id ::being-->
+    <div (click)="flip()" class="card-id">
+
+        <!--face front ::being-->
+        <div class="face front">
+
+            <div class="card-face">
+
+                <div class="body-face">
+
+                    <div class="top-body-face">
+
+                        <div class="content-user">
+
+                            <div class="user-img">
+
+                                <img src="assets/images/—Pngtree—business man avatar_8855195.png" alt="employee image">
+
+                            </div>
+
+                            <h3 class="user-name">{{employee?.employeeName |uppercase}}</h3>
+                            <p class="user-position" >{{'creative designer' |uppercase}}</p>
+                             
+                        </div>
+
+                    </div>
+
+                    <div class="bottom-body-face">
+
+                        <div class="info-user">
+
+                            <div class="d-flex justify-content-center  ">
+                                <div style="margin-right: 10px;">
+                                    <p class="my-0 fw-semibold ">ID ON</p>
+                                    <p class="my-0 fw-semibold">DOB</p>
+                                    <p class="my-0 fw-semibold">PHONE</p>
+                                    <p class="my-0 fw-semibold">E-mail</p>
+                                </div>
+
+                                <div>
+                                    <p class="my-0 fw-semibold">: {{employee?.idNo}}</p>
+                                    <p class="my-0 fw-semibold">: {{employee?.DOB | date : 'dd/MM/yy'}}</p>
+                                    <p class="my-0 fw-semibold">: 123 456 789</p>
+                                    <p class="my-0 fw-semibold">: {{employee?.email}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="mw-100 text-center ">
+                                <img src="assets/images/9185593.png" alt="serial code" style="height: 125px;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--face front ::end-->
+
+        <!--face back ::being-->
+        <div class="face back">
+
+            <div class="card-back">
+
+                <div class="body-back">
+
+                    <div class="top-body-back">
+
+                        <div  class="company-logo">
+
+                                <div class="logos" >
+
+                                    <img class="logo-one" src="assets/images/hexagon-geometrical-shape-outline.png" alt="company logo">
+
+                                    <img class="logo-two" src="assets/images/hexagon-geometrical-shape-outline.png" alt="company logo">
+
+                                </div>
+
+                            <h3 class="company-name" >COMPANY NAME</h3>
+                            <p class="company-category" >TAGLINE HERE</p>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="bottom-body-back">
+
+                        <div style="height: 220px;">
+
+                            <div class="text-center h-100 ">
+                                <div>
+                                    <h2>Terms &amp; Conditions</h2>
+
+                                    <p class="about-company" >Lorem ipsum dolor sit amet
+                                        consectetur, adipisicing elit. Labo riosam volu ptatibus. </p>
+
+                                    <p class="about-company" >Lorem ipsum dolor sit amet
+                                        consectetur, adipisicing elit. Labo riosam volupta tibus. </p>
+
+                                    <p class="about-company" > Lorem ipsum dolor sit amet
+                                        consectetur, adipisicing elit. Labori osam volup tatibus. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 70px;">
+                            <div class="text-center ">
+                                <p class="mb-1 "><span class="text-danger  fw-semibold">Date of league</span> : 10-03-2021</p>
+                                <p class="mt-0 "><span class="text-danger fw-semibold">Expire Date</span> : 20-05-2022</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!--face back ::end-->
+
+    </div>
+    <!--card id ::end-->
+
+</div>
